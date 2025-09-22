@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://stock-trading-gray.vercel.app'; // Updated to match your backend port
+const API_BASE_URL = 'https://stock-trading-gray.vercel.app/api'; // Updated to match your backend port
+// const API_BASE_URL = 'http://localhost:5001/api'; // Updated to match your backend port
 
 // Create axios instance with default config
 const api = axios.create({
@@ -8,8 +9,7 @@ const api = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  withCredentials: true, // Enable credentials for CORS
-  timeout: 10000, // 10 second timeout
+  withCredentials: true
 });
 
 // Add token to requests automatically
